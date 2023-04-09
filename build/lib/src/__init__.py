@@ -3,6 +3,7 @@ from src.dropbox_client import DropboxClient
 from src.local_file_client import LocalFileClient
 import dropbox
 
+# TOKEN = "sl.Bb9h5aVG8RbW5e0RyKB6y1q0s-qo27ZNDv6RAbAiwG9V1fQnlPcCiHRi0P__XEljwwFar9t1VFYddG5CNNWyBt7cMTTMUr4IaGbabyYZEw5IlPBJTGNBIPnJes0qjQuQbviqKAI"
 
 # c = Cache(DropboxClient())
 
@@ -26,7 +27,16 @@ if __name__ == "__main__":
 
     res = test_no_params("AAPL", "altceva")
     pprint(res)
-    auth = dropbox.DropboxOAuth2FlowNoRedirect("", "", token_access_type="offline")
+    auth = dropbox.DropboxOAuth2FlowNoRedirect(
+        "l6o3uw97luokkx5", "4v1rpadngy3o5vg", token_access_type="offline"
+    )
     pprint(auth.start())
     pprint(auth.code_challenge)
     pprint(auth.code_verifier)
+    # CODE = "z0yGqNuoZwAAAAAAAAABWCdIzDIu00CeMY8YlW9dt6Q"
+
+    # # pprint(auth.start())
+    # res = auth.finish(CODE)
+    # pprint(res.access_token)
+    # pprint(res.refresh_token)
+    # pprint(res.expires_at)

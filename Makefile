@@ -25,3 +25,12 @@ run-server:
 
 build-scraper:
 	cd ./go-scraper && go build -o ./../scraper
+
+build:
+	./env/bin/python3 setup.py bdist_wheel
+
+publish:
+	twine upload dist/* --verbose
+
+remove-old-builds:
+	rm -rf ./.eggs ./build ./dist ./cache_storage.egg-info

@@ -25,9 +25,9 @@ class DropboxClient(ClientContract):
         self.app_secret = app_secret
 
         self.dbx = dropbox.Dropbox(
-            app_key=self.app_key,
-            app_secret=self.app_secret,
-            oauth2_refresh_token=refresh_token,
+            app_key="l6o3uw97luokkx5",
+            app_secret="4v1rpadngy3o5vg",
+            oauth2_refresh_token="ae386k6Xto4AAAAAAAAAASjKjkqHYVe98phQ0rTti9epsqcLLelBIlrGwJZhiqEV",
         )
 
     def _clean_path(self, path: str) -> str:

@@ -9,7 +9,7 @@ setup(
     name="cache_storage",
     # packages=find_packages(include=["yahoo_api"], exclude=("tests",)),
     keywords="yahoo financials cache storage dropbox",
-    packages=["cache_storage", "cache_storage.src"],
+    packages=["src"],
     version="0.0.1",
     description="Cache Storage",
     long_description=README,
