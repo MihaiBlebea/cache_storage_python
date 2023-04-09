@@ -1,3 +1,6 @@
 env
 cache
 .env
+.eggs
+build
+cache_storage.egg-info
