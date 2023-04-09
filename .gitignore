@@ -3,4 +3,5 @@ cache
 .env
 .eggs
 build
+dist
 cache_storage.egg-info
