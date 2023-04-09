@@ -13,10 +13,13 @@ class DropboxClient(ClientContract):
         super().__init__()
 
         if app_key is None:
-            app_key = os.getenv("DROPBOX_APP_KEY")
+            app_key = os.getenv("DROPBOX_KEY")
 
         if app_secret is None:
-            app_secret = os.getenv("DROPBOX_APP_SECRET")
+            app_secret = os.getenv("DROPBOX_SECRET")
+
+        if refresh_token is None:
+            refresh_token = os.getenv("DROPBOX_REFRESH_TOKEN")
 
         assert isinstance(app_key, str), "app_key must be a string"
         assert isinstance(app_secret, str), "app_secret must be a string"
